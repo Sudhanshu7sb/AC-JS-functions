@@ -17,18 +17,89 @@
   also print the operation in alert after operation like if 'add' => 5 + 66 = 71 etc
  */
 //1. Write a Function Decleration
+function calculator(num1,num2, operation){
+  if(operation == 'add'){
+    return num1 + num2;
+  }
+  if(operaton == 'sub'){
+    if(num1>num2){
+      return num1 - num2;
+    }else {
+      return 'First number should not be smaller than second number';
+    }
+  }
+  if(operation == 'mul'){
+    return num1 * num2;
+  }
+  if(operaton == 'div'){
+    if(num1>num2){
+      return num1 / num2;
+    }else {
+      return 'First number should not be smaller than second number';
+    }
+  }
+}
 
 //2. Write an anonymous Function Expression
 
+(function (num1,num2, operation){
+  if(operation == 'add'){
+    return num1 + num2;
+  }
+  if(operaton == 'sub'){
+    if(num1>num2){
+      return num1 - num2;
+    }else {
+      return 'First number should not be smaller than second number';
+    }
+  }
+  if(operation == 'mul'){
+    return num1 * num2;
+  }
+  if(operaton == 'div'){
+    if(num1>num2){
+      return num1 / num2;
+    }else {
+      return 'First number should not be smaller than second number';
+    }
+  }
+})(5,3,'sub');
+
 //3. Write an named Function Expression
+let calculator = function (num1,num2, operation){
+  if(operation == 'add'){
+    return num1 + num2;
+  }
+  if(operaton == 'sub'){
+    if(num1>num2){
+      return num1 - num2;
+    }else {
+      return 'First number should not be smaller than second number';
+    }
+  }
+  if(operation == 'mul'){
+    return num1 * num2;
+  }
+  if(operaton == 'div'){
+    if(num1>num2){
+      return num1 / num2;
+    }else {
+      return 'First number should not be smaller than second number';
+    }
+  }
+}
 
 //4. Write an Arrow Function
+
+let calculator = (num1, num2,operation) => (operation == 'add')? num1 + num2 : ((operation == 'sub')?  num1-num2 : 'first number should be larger than second number')? : (operation == 'mul')? num1 * num2 : ((operation == 'div')? num1 / num2 : 'first number should be larger than second number');
 
 //5. Write an Arrow Function with curly brackets (if possible)
 
 //6. Execute the function
+calculator(5,3,'add');
 
 //7. Execute the function and store the return value in a variable.
+let store = calculator (5,3,'mul');
 
 //8. What is the typeof returnValue
 ```
@@ -43,7 +114,9 @@ add(21, 23);
 ```
 
 - Is the code above valid or not?
+invalid
 - Explain the reason.
+in placeholder we cannot declare a variable.
 
 ## writeQuiz
 
@@ -61,6 +134,7 @@ What will be the output of the above code?
 - [x] 210
 - [x] NaN
 
+error inside parameter we cannot use semicolon
 ## writeQuiz
 
 ```js
@@ -73,9 +147,9 @@ add(undefined, 21);
 What will be the output of the above code?
 
 - [x] 21
-- [x] 0
-- [x] 210
-- [x] NaN
+- [ ] 0
+- [ ] 210
+- [ ] NaN
 
 ## writeTextAnswer
 
@@ -90,9 +164,12 @@ function knowWhy(value) {
 knowWhy(211);
 ```
 
-- Output of the above code
+- Output of the above code 
+error
 - Is the code above valid or not?
+invalid
 - Explain the reason.
+in return statement we cannot write any condition .i.e it should be an expression which has some value
 
 ## writeTextAnswer
 
@@ -103,6 +180,9 @@ function isItIf(ifElse) {
 isItIf(if(true){console.log('Testing')});
 ```
 
-- Output of the above code
+- Output of the above code 
+error
 - Is the code above valid or not?
+invalid
 - Explain the reason.
+we cannot write condition in function call . i.e it should contain an expression having some value
